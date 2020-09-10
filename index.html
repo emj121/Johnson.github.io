@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Johnson Lee Portfolio</title>
+
+  <!-- Bootstrap CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+  <!-- FontAwsome Icon -->
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+  <!-- Devicon 2.0 -->
+  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+
+  <!-- My CSS style sheet  -->
+  <link rel="stylesheet" type="text/css" href="Home.css">
+
+  <title>Unity WebGL Player | Gallery</title>
+  <link rel="shortcut icon" href="WebGL/TemplateData/favicon.ico">
+  <!-- <link rel="stylesheet" href="WebGL/TemplateData/style.css"> -->
+  <script src="WebGL/TemplateData/UnityProgress.js"></script>
+  <script src="WebGL/Build/UnityLoader.js"></script>
+  <script>
+    var unityInstance = UnityLoader.instantiate("unityContainer", "WebGL/Build/WebGL.json", {onProgress: UnityProgress});
+  </script>
+
+</head>
+
+<!-- Loading animation -->
+
+<body>
+  <div class="loader hidden">
+    <div class="d-flex justify-content-center">
+      <div class="spinner-border" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="Portfolio.js"></script>
+
+  <script type="text/javascript">
+    window.addEventListener("load", function() {
+      const loader = document.querySelector(".loader");
+      loader.className += " hidden";
+    });
+  </script>
+
+  <!-- Title -->
+
+  <div class="box">
+    <div class="container-fluid">
+      <div class="WelcomeBox">
+        <div class="row">
+          <div class="col">
+            <span class="Welcome">Welcome to my portfolio</span>
+            <span class="Welcome2"><a href="WebGL/index.html">Or click here for an interactive version</a></span>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- <h1 class="text-center">Welcome</h1> -->
+  <!-- <div class="row">
+    <div class="col">
+      <div class="fade">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <i class="fa fa-file-code-o" aria-hidden="true"></i>
+      </div>
+    </div>
+  </div> -->
+
+
+  <!-- About me container -->
+  <div class="AboutMeBox">
+    <div class="container-fluid">
+      <!-- Profile description -->
+      <div class="row">
+        <div class="col">
+          <div class="AboutMe">
+            <h1>About Me</h1>
+            <h2 data-text="Hi, my name is Johnson">Hi, my name is Johnson</h2>
+
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="description">
+            <p>I am a developer who enjoys designing and creating applications, website and games on different platforms.
+              Ever since I was able to code, I have been keep on learning about new and current technologies.
+            </p>
+          </div>
+
+
+
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="backNeon">
+          <div class="AboutMeContent">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="CodingProfile">
+                  <div class="codeIcon">
+                    <i class="fa fa-code" aria-hidden="true"></i>
+                  </div>
+                  <div class="CodingProfileText">
+                    <h3>Computer Languages</h3>
+                    <h4>Web development</h4>
+                    <p>
+                      HTML, CSS, JavaScript, PHP, jQuery, Python
+                    </p>
+                    <h4>Games development</h4>
+                    <p>C#, C++, JavaScript</p>
+                    <h4>Database</h4>
+                    <p>SQL, NOSQL, SPARQL</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="CodingProfile">
+                  <div class="codeIcon">
+                    <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                  </div>
+                  <div class="CodingProfileText">
+                    <h3>Educations</h3>
+                    <h4>University</h4>
+                    <p>
+                      University of Manchester - MSc Advance Computer Science
+                      <br>
+                      <br>
+                      Manchester Metropolitan University - BSc Computer Games Technology (1st honours)
+                    </p>
+                    <h4>A-Levels</h4>
+                    <p>3 A-Levels including Maths</p>
+                    <h4>College</h4>
+                    <p>BTEC Extended Diploma Level 3 - D*D*D*</p>
+                    <h4>GCSE</h4>
+                    <p>5 GCSEs including Maths, Science and English</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="CodingProfile">
+                  <div class="codeIcon">
+                    <i class="fa fa-window-restore" aria-hidden="true"></i>
+                  </div>
+                  <div class="CodingProfileText">
+                    <h3>Software</h3>
+                    <h4>IDE</h4>
+                    <p>Visual Studio, Atom, VS Code, Notepad++</p>
+                    <h4>Office software</h4>
+                    <p>Microsoft office, G Suite</p>
+                    <h4>Database</h4>
+                    <p>MySQL, SQLite, Oracle, PostgreSQL</p>
+                    <h4>Graphics software</h4>
+                    <p>Adobe Photoshop, Adobe After Effects, Autodesk Maya</p>
+                    <h4>Game Engine</h4>
+                    <p>Unity, Unreal, RPG Maker series, Gamemaker</p>
+                    <h4>Operating System</h4>
+                    <p>Windows, Linux, Android, iOS</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="Projects">
+    <div class="row">
+      <div class="col">
+
+        <div class="description">
+          <h1>Projects</h1>
+          <p>The below videos are some of the projects I have worked on. Please feel free to explore and I hope you enjoy.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="ProjectContent">
+        <div class="row fade">
+          <div class="col-md-4">
+            <div class="video">
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/j5l4jokdOvY" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="video">
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/O15hCmwxLTY" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="video">
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zUJrmFV36c8" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center fade">
+          <div class="col-md-4">
+            <div class="video">
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/TI6evY61hjc" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="video">
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/S7uP4hsdtms" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="video">
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/C6Khz9mLfj8" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center fade">
+          <div class="col-md-4">
+            <div class="video">
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/vt1LGJbPm_c" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="video">
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/M_P7ME78wG0" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="gallery">
+    <iframe src="UE4 Gallery/Gallery.html" title="UE4 gallery" frameBorder="0" scrolling="no" display:none width="100%" height="100%">
+    </iframe>
+  </div> -->
+
+<!-- <div class="gallery">
+  <div class="webgl-content">
+    <div id="unityContainer" style="width: 960px; height: 600px"></div>
+    <div class="footer">
+      <div class="webgl-logo"></div>
+      <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+      <div class="title">Gallery</div>
+    </div>
+  </div>
+</div> -->
+
+
+  <div class="contact">
+    <div class="row justify-content-center">
+      <div class="col">
+        <h1>Contact</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="contact-details">
+        <div class="col">
+          <div class="icon">
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+            <p>www.linkedin.com/in/johnson-lee-5b102114b</p>
+          </div>
+          <div class="icon">
+            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+            <p>johnson.cs.lee@outlook.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

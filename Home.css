@@ -1,0 +1,607 @@
+/* Image sildeshow
+define max height
+crop image when it is over the max width
+*/
+/* Welcome page
+  The height is the length of the user's screen
+  animation text for heading and bottom text
+*/
+
+.box {
+  min-height: 100vh;
+  height: 100vh;
+  font-size: 5vh;
+  background-color: #1b222c;
+}
+
+.WelcomeBox {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vw;
+}
+
+.WelcomeBox a {
+  font-size: 5vh;
+}
+
+.box span {
+  color: white;
+  text-transform: uppercase;
+  display: block;
+}
+
+.contentBox img {
+  width: 70px;
+  /* background-color: #1b222c; */
+  position: fixed;
+}
+
+.Welcome {
+  font-size: 100%;
+  font-weight: 700;
+  letter-spacing: 8px;
+  margin-bottom: 20px;
+  background-color: #1b222c;
+  position: relative;
+  -webkit-animation: text 3s 1;
+}
+
+.Welcome2 a {
+  font-size: 30%;
+  -webkit-animation: text2 3s 1;
+}
+
+/* animation for the Welcome text */
+@-webkit-keyframes text {
+  0% {
+    color: white;
+    margin-bottom: -40px;
+  }
+
+  30% {
+    letter-spacing: 25px;
+    margin-bottom: -40%;
+  }
+
+  85% {
+    letter-spacing: 8px;
+    margin-bottom: -40px;
+  }
+}
+
+@-webkit-keyframes text2 {
+  0% {
+    color: #1b222c;
+  }
+
+  90% {
+    color: #1b222c;
+  }
+
+  95% {
+    color: white;
+  }
+}
+
+.AboutMeBox {
+  background-color: #1b222c;
+  text-align: center;
+  color: white;
+  height: 100%;
+}
+
+/* .AboutMeBox .AboutMe
+{
+  width: 100vw;
+  height: 100%;
+  margin: auto;
+  text-align: center;
+  background-color: #FFE002;
+} */
+
+.AboutMe h1 {
+  margin-top: 5vw;
+  margin-bottom: 10vw;
+}
+
+.AboutMeBox h2 {
+  position: absolute;
+  font-size: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin: 0;
+  padding: 0;
+  color: transparent;
+  white-space: nowrap;
+}
+
+.AboutMeBox h2:before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+  overflow: hidden;
+  border-right: 1px solid #000;
+  animation: type 5s steps(15) infinite;
+}
+
+@keyframes type {
+  0% {
+    width: 0%;
+  }
+
+  50% {
+    width: 100%;
+  }
+}
+
+.AboutMeBox .fade {
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  color: #003366;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  letter-spacing: 4px;
+  opacity: 1;
+}
+
+.AboutMeBox .fade:hover {
+  background: #4da6ff;
+  color: #003366;
+  box-shadow: 0 0 5px #4da6ff,
+    0 0 25px #4da6ff,
+    0 0 50px #4da6ff,
+    0 0 200px #4da6ff;
+  transition-delay: 1s
+}
+
+.AboutMeBox .fade span {
+  position: absolute;
+  display: block;
+}
+
+.AboutMeBox .fade span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #4da6ff);
+}
+
+.AboutMeBox .fade:hover span:nth-child(1) {
+  left: 100%;
+  transition: 1s;
+}
+
+.AboutMeBox .fade span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #4da6ff);
+}
+
+.AboutMeBox .fade:hover span:nth-child(2) {
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+
+.AboutMeBox .fade span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to left, transparent, #4da6ff);
+}
+
+.AboutMeBox .fade:hover span:nth-child(3) {
+  right: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+
+.AboutMeBox .fade span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #4da6ff);
+}
+
+.AboutMeBox .fade:hover span:nth-child(4) {
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.75s;
+}
+
+.AboutMeBox .AboutMe
+{
+  background-color: #282828;
+  padding-bottom: 30px;
+}
+
+.AboutMeBox .description p
+{
+  width: 70vw;
+  color: white;
+  margin: auto;
+  padding: 30px;
+  text-align: center;
+}
+
+.AboutMeBox .AboutMe p
+{
+  width: 70vw;
+  text-align: center;
+  margin: auto;
+}
+
+.AboutMeBox .backNeon .AboutMeContent {
+  position: relative;
+  margin: auto;
+  margin-bottom: 1px;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, #282828, #262626);
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.AboutMeBox .backNeon {
+  position: relative;
+  margin: auto;
+  margin-bottom: 50px;
+  width: 85%;
+  height: 100%;
+  background: linear-gradient(0deg, #000, #262626);
+  z-index: 0;
+}
+
+.AboutMeBox .backNeon::before,
+.AboutMeBox .backNeon::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000);
+  background-size: 400%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: -1;
+  animation: neon 20s linear infinite;
+}
+
+.AboutMeBox .backNeon::after {
+  filter: blur(24px);
+}
+
+@keyframes neon {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.AboutMeBox .CodingProfile {
+  position: relative;
+  width: 100%;
+  height: calc(30vh + 450px);
+  background: linear-gradient(0deg, #0C0032, #190061);
+  float: left;
+  margin: auto;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.AboutMeBox .CodingProfile h4 {
+  font-size: 18px;
+}
+
+.AboutMeBox .CodingProfile .codeIcon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 100%;
+  background: #3500D3;
+  transition: 0.5s;
+  z-index: 1;
+}
+
+.AboutMeBox .CodingProfile:hover .codeIcon {
+  top: 10%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+
+.AboutMeBox .CodingProfile .codeIcon .fa {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  right: 0;
+  transition: translate(-50%, -50%);
+  font-size: 80px;
+  transition: 0.5s;
+  color: white;
+}
+
+.AboutMeBox .CodingProfile:hover .codeIcon .fa {
+  top: 30%;
+  font-size: 30px;
+}
+
+.AboutMeBox .CodingProfile .CodingProfileText {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: calc(100% - 100px);
+  text-align: center;
+  margin-top: 10vh;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: 0.5s;
+  word-wrap: break-word;
+}
+
+.AboutMeBox .CodingProfile:hover .CodingProfileText {
+  top: 100px;
+}
+
+.Projects {
+  width: 100%;
+  height: 100%;
+  background-color: #1b222c;
+  overflow: hidden;
+}
+
+.description
+{
+  width: 100%;
+  height: 200px;
+  color: white;
+  margin-bottom: 20px;
+  background-color: #282828;
+  justify-content: center;
+}
+
+.Projects .description p
+{
+  width: 70vw;
+  color: white;
+  margin: auto;
+  padding: 30px;
+  text-align: center;
+}
+
+.Projects h1 {
+  text-align: center;
+  color: white;
+  margin: 20px;
+}
+
+.Projects .ProjectContent {
+  width: 80%;
+}
+
+.Projects .ProjectContent .video {
+  margin: 10px;
+}
+
+.gallery {
+  width: 100%;
+  height: 650px;
+  background-color: #1b222c;
+  overflow: hidden;
+}
+
+.gallery .galleryBG{
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+}
+
+.gallery .galleryBG::before
+{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  /* background: linear-gradient( rgba(255, 0, 100, 1)); */
+  z-index: 10000;
+}
+
+.gallery .galleryBG::after
+{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: rgba(255, 0, 100, 1); */
+  z-index: 10000;
+  mix-blend-mode: color;
+}
+
+#galleryTitle
+{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 100%;
+  margin-top: 40px;
+  text-align: center;
+  color: white;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.gallery .galleryBG #Blind_angel
+{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  opacity: 0.1;
+}
+
+.gallery .galleryBG #Scientific_angel
+{
+  position: absolute;
+  top: 0;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  opacity: 0.1;
+}
+
+.gallery .galleryBG #Mahou_shoujo
+{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  opacity: 0.1;
+}
+
+.gallery .galleryBG .gallery-container
+{
+  /* position: absolute;
+  bottom: 0; */
+}
+
+.contact {
+  width: 100%;
+  height: 100%;
+  background-color: #282828;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.contact h1
+{
+  margin: 20px;
+}
+
+.contact .contact-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.contact .contact-details .icon {
+  margin-top: 60px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 0;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+.contact .contact-details .icon p {
+  position: absolute;
+  bottom: 55px;
+  width: 400px;
+  background: #3500D3;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+  transform: translateX(-50%) translateY(40px);
+}
+
+.contact .contact-details .icon:hover p {
+  visibility: visible;
+  opacity: 1;
+}
+
+.nav-item {
+  transition: 0.5s;
+}
+
+/* Hover effects for navigation menu */
+.nav-item:hover {
+  background-color: grey;
+  opacity: 0.5;
+}
+
+/* visible buttons on image slideshow */
+.carousel-control-prev:hover, .carousel-control-next:hover {
+  background-color: #1b222c;
+  opacity: 0.5;
+}
+
+.loader {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader.hidden {
+  -webkit-animation: fadeOut 1s;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fadeOut {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
